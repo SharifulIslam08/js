@@ -1,0 +1,89 @@
+<!--<html>
+<body>
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+
+<script>
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+var p= document.getElementById(fruits);
+document.write(p)
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Map Objects</h2>
+<p id="dem">Using Map.set():</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+document.getElementById("demo").innerHTML = fruits.get("apples");
+</script>
+<button onclick='document.getElementById("dem").innerHTML = fruits.get("bananas")'>click</button>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo">hello world</p>
+  <p id="demo1">hello world</p>
+  <p id="demo2">hello world</p>
+  <p id="demo3">hello world</p>
+  <script>
+     const name= new Map()
+     name.set("tushar",22);
+     name.set("morshed",23);
+     name.set("zahid",24);
+     name.set("asim",24)
+     name.delete("zahid");
+     const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+     //document.getElementById("demo").innerHTML= name.get("tushar");
+    // document.getElementById("demo1").innerHTML= name.size;
+    // document.getElementById("demo2").innerHTML= name.has("morshe");
+    const txt = name.entries();
+
+document.write(txt.next().value);
+// expected output: Array [0, "a"]
+    let text = "";
+    name.forEach(function(value, key) {
+      text += key + ' = ' + value + "<br>"
+    });
+    let texts = "";
+for (const x of fruits.entries()) {
+  texts += x + "<br>";
+}
+    document.getElementById("demo").innerHTML= text;
+    document.getElementById("demo1").innerHTML= texts;
+  </script>
+ 
+</body>
+</html>
