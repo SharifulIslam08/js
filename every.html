@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="d"></p>
+    <script>
+        let x=[12,45,26,24,12,74];
+        document.getElementById("d").innerHTML=x.every(check);
+        function check(x)
+        {
+            return x>18;
+        }
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Arrays</h1>
+<h2>The every() Method</h2>
+
+<p>Check if all the answers in the array is the same:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const survey = [
+  { name: "Steve",   answer: "Yes"},
+  { name: "Jessica", answer: "Yes"},
+  { name: "Peter",   answer: "Yes"},
+  { name: "Elaine",  answer: "No"}
+];
+document.getElementById("demo1").innerHTML = survey;
+
+document.getElementById("demo").innerHTML = survey.every(isSameAnswer);
+
+function isSameAnswer(el,index,arr) {
+  // Return true for the first element
+  if (index === 0){
+    return true;
+  }
+  else {
+  // Compare the value of the previous element
+    return (el.answer === arr[index - 1].answer);
+  }
+}
+</script>
+
+</body>
+</html>
