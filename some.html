@@ -8,7 +8,7 @@
 </head>
 <body>
     Input : <input type="number" id="num"><br>
-    <button type="submit" onclick="test">text</button>
+    <button type="submit" onclick="test()">text</button>
     <p>result : <span id="demo"></span></p>
     <script>
         const a=[23,42,52,25,24,5,29];
@@ -18,7 +18,7 @@
         }
         function clicktest(a)
         {
-            return a> document.getElementById(num);
+            return a> document.getElementById("num").value;
         }
 
     </script>
