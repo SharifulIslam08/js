@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>find</title>
+    <title>find index</title>
 </head>
 <body>
     <p id="demo">hello</p>
     <script>
         const x=[4,24,24,54,64,2];
-        
-        //const result= x.find(54);
-        //alert(result);
-        document.getElementById("demo").innerHTML=x.find(find);
+        for(let i=0;i<x.length;i++);
+        {
+            //document.write(x[i]);
+            //document.getElementById("demo").innerHTML=(x[i]);
+        }
+        document.getElementById("demo").innerHTML=x.findIndex(find);
         function find(x)
         {
             return x>40;
